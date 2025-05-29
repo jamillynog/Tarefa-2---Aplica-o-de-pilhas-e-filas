@@ -1,4 +1,5 @@
 import java.time.LocalDateTime;
+import java.time.Duration;
 
 public class fila {
 
@@ -11,6 +12,9 @@ public class fila {
     public fila(String arquivo, String usuario) {
         this.arquivo = arquivo;
         this.usuario = usuario;
-        this.horaImpresso = horaImpresso;
+        this.horaPedido = LocalDateTime.now();
     }
+
+    public long calculoTempo() 
+        return java.time.Duration.between(horaPedido, horaImpresso).toMinutes();
 }
